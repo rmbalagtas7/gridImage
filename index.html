@@ -4,35 +4,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap");
+
+  body,
+  html {
+    height: 100%;
+    min-height: 100%;
+  }
+
+  body {
+    background-color: hsla(178, 71%, 27%, 1);
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  .btn,
+  .btn:focus,
+  .btn:active {
+    position: relative;
+    display: inline-block;
+    font-family: "Ropa Sans", sans-serif;
+    font-size: clamp(1rem, 1.8vw, 1.25rem);
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 1);
+    padding: 0 18px;
+    border-radius: 0;
+    border: none;
+    background-image: url("../img/layout/btn-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  .btn:before,
+  .btn:after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 30px;
+    height: 30px;
+    transform: rotate(45deg);
+    z-index: 3;
+  }
+
+  .btn:hover:before,
+  .btn:hover:after {
+    background-color: hsla(0, 0%, 100%, 1);
+  }
+
+  .btn:before {
+    bottom: 4px;
+    right: 4px;
+    border-right: 3px solid hsla(0, 0%, 100%, 1);
+  }
+
+  .btn:after {
+    top: 4px;
+    left: 4px;
+    border-left: 3px solid hsla(0, 0%, 100%, 1);
+  }
+
+  .btn .btn-text,
+  .btn:focus .btn-text,
+  .btn:active .btn-text {
+    color: hsla(0, 0%, 100%, 1);
+  }
+
+  .btn .btn-text,
+  .btn:hover .btn-text {
+    position: relative;
+    display: block;
+    line-height: 1;
+    padding: 1.25rem 1.5rem;
+    border-top: 3px solid hsla(0, 0%, 100%, 1);
+    border-bottom: 3px solid hsla(0, 0%, 100%, 1);
+    z-index: 3;
+  }
+
+  .btn:hover .btn-text {
+    color: hsla(178, 71%, 27%, 1);
+    background-color: hsla(0, 0%, 100%, 1);
+  }
+
+  .btn .btn-text:before,
+  .btn .btn-text:after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: calc(100% - 13px);
+    z-index: 3;
+  }
+
+  .btn:hover .btn-text:before,
+  .btn:hover .btn-text:after {
+    background-color: hsla(0, 0%, 100%, 1);
+  }
+
+  .btn .btn-text:before {
+    left: -18px;
+    bottom: -3px;
+    border-bottom: 3px solid hsla(0, 0%, 100%, 1);
+    border-left: 3px solid hsla(0, 0%, 100%, 1);
+  }
+
+  .btn .btn-text:after {
+    top: -3px;
+    right: -18px;
+    border-top: 3px solid hsla(0, 0%, 100%, 1);
+    border-right: 3px solid hsla(0, 0%, 100%, 1);
+  }
+</style>
 
 <body>
-  <div class="container collage2">
-    <div class="grid-container">
-      <div class="item item1">
-        <img src="./img/06.jpg" alt="image">
-      </div>
-      <div class="item item2">
-        <img src="./img/05.jpg" alt="image">
-      </div>
-      <div class="item item3">
-        <img src="./img/01.jpg" alt="image">
-      </div>
-      <div class="item item4">
-        <img src="./img/03.jpg" alt="image">
-      </div>
-      <div class="item item5">
-        <img src="./img/05.jpg" alt="image">
-      </div>
-      <div class="item item6">
-        <img src="./img/02.jpg" alt="image">
-      </div>
-      <div class="item item7">
-        <img src="./img/04.jpg" alt="image">
-      </div>
-    </div>
+  <div class="wrapper">
+    <a class="btn" href="secondPage.html"><span class="btn-text">Click Me</span></a>
   </div>
 </body>
 
